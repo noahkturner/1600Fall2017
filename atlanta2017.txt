@@ -1,11 +1,11 @@
-Atlanta United FC 2017 Record
+Atlanta United FC 2017 Record (as of now)
 
-Points:
+Points: 27
 
-Wins:
-Losses:
-Draws:
+Wins: 8
+Losses: 7
+Draws: 3
 
-Goals Scored:
-Goals Against:
-Goal Differential:
+Goals Scored: 35
+Goals Against: 25
+Goal Differential: 10
