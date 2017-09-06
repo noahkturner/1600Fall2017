@@ -1,8 +1,11 @@
 RSL 2016 Season
 
+Points: 46
+
 Wins: 12
 Losses: 12
 Draws: 10
 
 Goals Scored: 44
 Goals Against: 46
+Goal Differential: -2
