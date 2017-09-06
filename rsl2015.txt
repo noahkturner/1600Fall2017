@@ -13,12 +13,12 @@ Goal Differential: -10
 
 NYCFC 2015 Record
 
-Points: 
+Points: 37
 
-Wins: 
-Losses: 
-Draws: 
+Wins: 10 
+Losses: 17
+Draws: 7
 
-Goals Scored: 
-Goals Against: 
-Goal Differential: 
+Goals Scored: 47 
+Goals Against: 53
+Goal Differential: -6 
