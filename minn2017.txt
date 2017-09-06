@@ -1,11 +1,11 @@
 Minnesota United FC 2017 Season (as of now)
 
-Points:
+Points: 25
 
-Wins:
-Losses:
-Draws:
+Wins: 7
+Losses: 4
+Draws: 14
 
-Goals For:
-Goals Against:
-Goal Differential: 
+Goals For: 32
+Goals Against: 52
+Goal Differential: -30 
