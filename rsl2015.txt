@@ -1,11 +1,11 @@
-RSL 2017 Record
+RSL 2015 Record
 
-Points: 27
+Points: 41
 
-Wins: 8
-Losses: 7
-Draws: 3
+Wins: 11
+Losses: 15
+Draws: 8
 
-Goals Scored: 35
-Goals Against: 25
-Goal Differential: 10
+Goals Scored: 38
+Goals Against: 48
+Goal Differential: -10
