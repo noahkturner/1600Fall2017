@@ -5,4 +5,8 @@ public class Vars : MonoBehaviour {
 	{
 		health += 20;
 	}
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> master
