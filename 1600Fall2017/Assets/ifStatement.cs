@@ -12,11 +12,11 @@ public class ifStatement : MonoBehaviour {
 
 	void Update () {
 		if(input.text == password) {
-<<<<<<< HEAD
+
 			print("You know the password");
-=======
+
 			print("You know the password.");
->>>>>>> master
+
 			canPlayGame = true;
 		} else {
 			print("The password is incorrect.");
@@ -24,13 +24,10 @@ public class ifStatement : MonoBehaviour {
 
 		if(canPlayGame) {
 			print("Playing Game");
-<<<<<<< HEAD
+
 		}   else {
 			print("Can't Play Yet, Enter a correct password.");
-=======
-		}	else {
-			print("Can't Play Yet, Enter a Correct Password.");
->>>>>>> master
 		}
 	}
 }
+
