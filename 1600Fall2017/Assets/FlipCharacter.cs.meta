@@ -1,11 +1,6 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:1600Fall2017/Assets/Crab.cs.meta
-guid: 4fd6f0575908b9644853d30f46fc9db8
-timeCreated: 1503942237
-=======
 guid: 82b54c510b1245142bd0e2417b72ffb8
 timeCreated: 1505495505
->>>>>>> master:1600Fall2017/Assets/FlipCharacter.cs.meta
 licenseType: Pro
 MonoImporter:
   serializedVersion: 2
