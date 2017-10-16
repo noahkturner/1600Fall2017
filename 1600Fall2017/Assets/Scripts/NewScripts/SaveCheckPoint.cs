@@ -6,7 +6,7 @@ public class SaveCheckPoint : MonoBehaviour {
 
 	public Transform player;
 	Vector3 checkPoint;
-	string[] playerPrefsTitles = {"CheckPointX", "CheckPointY", "CheckPointZ"} 
+	string[] playerPrefsTitles = {"CheckPointX", "CheckPointY", "CheckPointZ"}; 
 	
 	void OnTriggerEnter () {
 		checkPoint = transform.position;
