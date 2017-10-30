@@ -6,17 +6,61 @@ using UnityEngine.UI;
 public class UIBar : MonoBehaviour {
 
 	public Image bar;
-	public float barTime = 0.1f;
+	public GameObject gameOverUI;
+	public float powerLevel = 0.1f;
+	public float ammountToAdd = 0.01f;
 
-	// Use this for initialization
-	void OnTriggerEnter () {
-		StartCoroutine(UpdateBar());
+	public enum PowerUpType
+	{
+		PowerUp,
+		PowerDown
 	}
-	IEnumerator UpdateBar () {
-		while (bar.fillAmount < 1)
+
+	public PowerUpType powerUp;
+	void OnTriggerEnter () {
+		switch (powerUp)
 		{
-			bar.fillAmount += barTime;
-			yield return new WaitForSeconds(barTime);
+			case PowerUpType.PowerUp:
+				StartCoroutine(PowerUpBar());
+			break;
+
+			case PowerUpType.PowerDown:
+				StartCoroutine(PowerDownBar());
+			break;
+		}
+	}
+
+	IEnumerator PowerUpBar () {
+		float tempAmount = bar.fillAmount + powerLevel;
+		if (tempAmount > 1)
+		{
+			tempAmount = 1;
+		}
+		
+		while (bar.fillAmount < tempAmount)
+		{
+			bar.fillAmount += ammountToAdd;
+			yield return new WaitForSeconds(ammountToAdd);
+		}
+	}
+
+	IEnumerator PowerDownBar () {
+		float tempAmount = bar.fillAmount - powerLevel;
+		if(tempAmount < 0) {
+			tempAmount = 0;
+		}
+		
+		while (bar.fillAmount > tempAmount)
+		{
+			bar.fillAmount -= ammountToAdd;
+			yield return new WaitForSeconds(ammountToAdd);
+
+		}
+
+		if (bar.fillAmount == 0)
+		{
+			gameOverUI.SetActive(true);
+			CharacterControl.gameOver = true;
 		}
 	}
 }
