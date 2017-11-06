@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class UIBar : MonoBehaviour {
 
 	public Image bar;
+	public Text endGameText;
 	public Text coinNum;
 	public int totalCoinValue;
 	public int coinValue = 10;
@@ -19,7 +20,8 @@ public class UIBar : MonoBehaviour {
 	{
 		PowerUp,
 		PowerDown,
-		CollectCoin
+		CollectCoin,
+		Win
 	}
 
 	public PowerUpType powerUp;
@@ -38,6 +40,9 @@ public class UIBar : MonoBehaviour {
 
 			case PowerUpType.CollectCoin:
 				StartCoroutine(CollectCoin());
+			break;
+			case PowerUpType.Win:
+				EndGame("You Win!!");
 			break;
 		}
 	}
@@ -82,8 +87,13 @@ public class UIBar : MonoBehaviour {
 
 		if (bar.fillAmount == 0)
 		{
-			gameOverUI.SetActive(true);
-			CharacterControl.gameOver = true;
+			EndGame("Game Over");
 		}
 	}
+	
+	void EndGame (string _text) {
+		endGameText.text = _text;
+		gameOverUI.SetActive(true);
+		CharacterControl.gameOver = true;
+	} 
 }
