@@ -21,6 +21,6 @@ public class PlayerMove : MonoBehaviour {
 			}
 			movement.x = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
 		}
-		playerMove.Move(movement);
+		playerMove.Move(movement);     
 	}
 }
