@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour {
 
-	public float speed = 15;
+	public float speed = 12;
 	public float gravity = 9.81f;
 	public CharacterController playerMove;
 	public Vector3 movement;
-	public float jumpHeight = 12;
+	public float jumpHeight = 20;
 	public static bool gameState = false;
 	
 	void Update () {
