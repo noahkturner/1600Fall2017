@@ -23,6 +23,6 @@ public class PlayGame : MonoBehaviour {
 		PlayerMove.gameState = false;
 		gameStart.SetActive(false);
 		lifeBar.fillAmount = fillBar;
-		player.position = startPosition;
+		//player.position = startPosition;
 	}
 }
