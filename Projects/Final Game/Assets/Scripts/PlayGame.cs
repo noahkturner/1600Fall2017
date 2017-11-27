@@ -6,15 +6,17 @@ public class PlayGame : MonoBehaviour {
 
 	public static Vector3 start;
 	public GameObject gameStart;
+	public Transform player;
 
-	// Use this for initialization
+	
 	void Awake () {
-		PlayerMove.SetActive = false;
-		startPosition = player
+		gameStart.SetActive(false);
+		start = player.position;
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
+	
+	public void Click () {
+		PlayerMove.gameState = false;
+		gameStart.SetActive(false);
 	}
 }
