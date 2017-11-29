@@ -5,6 +5,6 @@ using UnityEngine;
 public class Checkpoint : MonoBehaviour {
 
 	void OnTriggerEnter() {
-		//PlayGame.startPosition = transform.position;
+		PlayGame.startPosition = transform.position;
 	}
 }
