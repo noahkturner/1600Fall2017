@@ -79,6 +79,11 @@ public class GeneralControl : MonoBehaviour {
 			barUI.fillAmount -= addAmount;
 			yield return new WaitForSeconds(addAmount);
 		}
+
+		if (barUI.fillAmount == 0){
+			EndGame("Game Over");
+		}
+	
 	}
 
 	void EndGame (string _text) {

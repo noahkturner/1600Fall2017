@@ -26,4 +26,6 @@ public class PlayGame : MonoBehaviour {
 		lifeBar.fillAmount = fillBar;
 		player.position = startPosition;
 	}
+
+	
 }
