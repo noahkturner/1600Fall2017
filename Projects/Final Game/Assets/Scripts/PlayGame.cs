@@ -13,7 +13,7 @@ public class PlayGame : MonoBehaviour {
 
 
 	
-	void Awake () {
+	void Awake () { //awake is called before anything else (used to set stuff up). this sets up the start position, fill amount of the bar, and the game state
 		gameStart.SetActive(false);
 		startPosition = player.position;
 		fillBar = lifeBar.fillAmount;
