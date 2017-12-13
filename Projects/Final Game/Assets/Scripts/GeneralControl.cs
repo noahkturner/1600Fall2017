@@ -23,10 +23,15 @@ public class GeneralControl : MonoBehaviour {
 		PowerUp,
 		PowerDown,
 		Collection,
-		Win,		
+		Win,	
+		Compliment
+			
 	}
 
+	
+
 	public PowerUpCat powerUp;
+	
 
 	void OnTriggerEnter() { //allows for multiple values to be tested. each value is a case with variables inside. the end of each case must include a break
 		switch (powerUp)  
@@ -54,8 +59,13 @@ public class GeneralControl : MonoBehaviour {
 					PlayerMove.gameState = true;
 				}
 			break;
-			
+
+			case PowerUpCat.Compliment:
+				StartCoroutine(Compliment());
+			break;
+
 		}
+		
 	}
 
 	IEnumerator Collection () { //IEnumerator methods must return something. parse converts the collectnum text into an int
@@ -71,6 +81,7 @@ public class GeneralControl : MonoBehaviour {
 		{
 			print("You are " + element + "!");
 		}
+		
 		collectGone.SetActive(false); //this hides/destroys the object after the player collides with it
 	}
 
@@ -111,6 +122,30 @@ public class GeneralControl : MonoBehaviour {
 		PlayerMove.gameState = true;
 	}
 
+	IEnumerator Compliment () {
+		if(collectNum.text == "10") {
+			print("You are okay!");
+		}
+		if(collectNum.text == "20") {
+			print("You are good!");
+		}
+		if(collectNum.text == "30") {
+			print("You are great!");
+		}
+		if(collectNum.text == "40") {
+			print("You are cool!");
+		}
+		if(collectNum.text == "50") {
+			print("You are awesome!");
+		}
+		if(collectNum.text == "60") {
+			print("You are fantastic!");
+		}
+		if(collectNum.text == "70") {
+			print("You are outstanding!");
+		}
+		return null;
+	}
 	
-	
+
 }
