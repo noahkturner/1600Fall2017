@@ -13,13 +13,14 @@ public class GeneralControl : MonoBehaviour {
 	public GameObject gameStateUI;
 	public float strengthPwr = 0.1f;
 	public float addAmount = 0.01f;
+	public GameObject movement;
 
 	public enum PowerUpCat
 	{
 		PowerUp,
 		PowerDown,
 		Collection,
-		Win
+		Win,		
 	}
 
 	public PowerUpCat powerUp;
@@ -86,10 +87,19 @@ public class GeneralControl : MonoBehaviour {
 	
 	}
 
+	void Update () {
+			if (totalCollectValue < 30) {
+			EndGame("Need at least 30 to win.");
+			PlayerMove.gameState = false;
+		}
+
+	}
 	void EndGame (string _text) {
 		gameOverText.text = _text;
 		gameStateUI.SetActive(true);
 		PlayerMove.gameState = true;
 	}
+
+	
 	
 }

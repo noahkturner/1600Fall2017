@@ -10,6 +10,8 @@ public class PlayerMove : MonoBehaviour {
 	public Vector3 movement;
 	public float jumpHeight = 20;
 	public static bool gameState = false;
+	public GameObject gameStateUI;
+	
 	
 	void Update () {
 		movement.y -= gravity * Time.deltaTime;
@@ -21,6 +23,13 @@ public class PlayerMove : MonoBehaviour {
 			}
 			movement.x = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
 		}
-		playerMove.Move(movement);     
+		playerMove.Move(movement); 
+		
+		if (transform.position.y <= -1) {
+			gameState = true;
+			gameStateUI.SetActive(true);
+		}   
 	}
+
+	
 }
