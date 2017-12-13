@@ -15,6 +15,7 @@ public class GeneralControl : MonoBehaviour {
 	public float addAmount = 0.01f;
 	public GameObject collectGone;
 	public string minimum = "70";
+	public string[] cool = {"Cool", "Awesome", "Neat"};
 
 
 	public enum PowerUpCat //starts a list of enumerators that are easily accessed, each with their own parameters
@@ -66,7 +67,10 @@ public class GeneralControl : MonoBehaviour {
 			yield return new WaitForFixedUpdate();
 		}
 
-		
+		foreach (string element in cool)
+		{
+			print("You are " + element + "!");
+		}
 		collectGone.SetActive(false); //this hides/destroys the object after the player collides with it
 	}
 
