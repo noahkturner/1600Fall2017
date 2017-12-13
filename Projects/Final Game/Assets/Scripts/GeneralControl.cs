@@ -13,7 +13,7 @@ public class GeneralControl : MonoBehaviour {
 	public GameObject gameStateUI;
 	public float strengthPwr = 0.1f;
 	public float addAmount = 0.01f;
-	public GameObject movement;
+	public GameObject collectGone;
 
 	public enum PowerUpCat
 	{
@@ -42,6 +42,14 @@ public class GeneralControl : MonoBehaviour {
 
 			case PowerUpCat.Win:
 				EndGame("Winner!");
+				if (totalCollectValue > 35) {
+			EndGame("You Win!");
+		}
+		else
+		{
+			EndGame("You need at least 40 points to win!");
+			PlayerMove.gameState = false;
+		}
 			break;
 		}
 	}
@@ -54,6 +62,9 @@ public class GeneralControl : MonoBehaviour {
 			collectNum.text = (totalCollectValue++).ToString();
 			yield return new WaitForFixedUpdate();
 		}
+
+		
+		collectGone.SetActive(false);
 	}
 
 	IEnumerator PowerUpBar () {
@@ -87,13 +98,8 @@ public class GeneralControl : MonoBehaviour {
 	
 	}
 
-	void Update () {
-			if (totalCollectValue < 30) {
-			EndGame("Need at least 30 to win.");
-			PlayerMove.gameState = false;
-		}
+	
 
-	}
 	void EndGame (string _text) {
 		gameOverText.text = _text;
 		gameStateUI.SetActive(true);
