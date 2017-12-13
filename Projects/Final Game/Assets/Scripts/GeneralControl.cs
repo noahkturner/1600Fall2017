@@ -14,6 +14,8 @@ public class GeneralControl : MonoBehaviour {
 	public float strengthPwr = 0.1f;
 	public float addAmount = 0.01f;
 	public GameObject collectGone;
+	public string minimum = "70";
+
 
 	public enum PowerUpCat
 	{
@@ -41,7 +43,7 @@ public class GeneralControl : MonoBehaviour {
 			break;
 
 			case PowerUpCat.Win:
-				if (totalCollectValue == 7) 
+				if (collectNum.text == minimum) 
 				{
 					EndGame("You Win!");
 				}
