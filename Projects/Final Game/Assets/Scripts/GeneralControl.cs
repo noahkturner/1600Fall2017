@@ -41,16 +41,17 @@ public class GeneralControl : MonoBehaviour {
 			break;
 
 			case PowerUpCat.Win:
-				EndGame("Winner!");
-				if (totalCollectValue > 35) {
-			EndGame("You Win!");
-		}
-		else
-		{
-			EndGame("You need at least 40 points to win!");
-			PlayerMove.gameState = false;
-		}
+				if (totalCollectValue > 69) 
+				{
+					EndGame("You Win!");
+				}
+				else 
+				{
+					EndGame("You need at least 70 points to win!");
+					PlayerMove.gameState = false;
+				}
 			break;
+			
 		}
 	}
 
@@ -97,8 +98,6 @@ public class GeneralControl : MonoBehaviour {
 		}
 	
 	}
-
-	
 
 	void EndGame (string _text) {
 		gameOverText.text = _text;
